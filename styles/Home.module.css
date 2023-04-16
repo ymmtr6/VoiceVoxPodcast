@@ -108,6 +108,33 @@
   margin-left: 0.5rem;
 }
 
+#progress-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+#progress-container {
+  width: 80%;
+  height: 30px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+#progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #4caf50;
+  position: absolute;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
