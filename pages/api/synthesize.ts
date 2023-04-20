@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
-const VOICEVOX_API_URL = "http://127.0.0.1:50021";
-
 const headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -26,7 +24,7 @@ export default async function handler(
     const speakerId = process.env.VOICEVOX_SPEAKER_ID ?? 14;
 
     const audioResponse = await axios.post(
-      `${VOICEVOX_API_URL}/synthesis?speaker=14`,
+      `${process.env.VOICEVOX_API_URL}/synthesis?speaker=14`,
       text,
       {
         responseType: "arraybuffer",
